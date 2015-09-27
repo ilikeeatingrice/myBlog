@@ -1,0 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
+  {% if session.logged_in %}
+  {% endif %}
+  <ul class=entries>
+    <li><h2>{{ entry.title }}</h2><h3>{{entry.time}}</h3>{{ entry.text|safe }}
+  </ul>
+{% endblock %}
