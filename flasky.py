@@ -8,8 +8,8 @@ from datetime import datetime
 DATABASE = '/tmp/flaskr.db'
 DEBUG = True
 SECRET_KEY = "eat rice"
-USERNAME = 't1ancheng'
-PASSWORD = '200412027'
+USERNAME = 'don.jobs'
+PASSWORD = '12345'
 
 #app section
 app = Flask(__name__)
