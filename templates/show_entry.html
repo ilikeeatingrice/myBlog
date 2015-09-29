@@ -1,6 +1,18 @@
 {% extends "layout.html" %}
 {% block body %}
   {% if session.logged_in %}
+    <form action=" {{url_for('edit_entry', entryId=entry.id)}} " method=post class=add-entry>
+      <dl>
+        <dt>Title:
+        <dd><input type=text size=30 name=title value='{{ entry.title }}'>
+        <dt>Text:
+        <dd><textarea name=text rows=5 cols=40>{{ entry.text|safe }}</textarea>
+        <dd><input type=submit value=Update>
+        <dd><button type="button"><a href = "{{url_for('delete_entry', entryId=entry.id)}}">Delete</a></button>
+      </dl>
+     
+    </form>
+
   {% endif %}
   <ul class=entries>
     <li><h2>{{ entry.title }}</h2><h3>{{entry.time}}</h3>{{ entry.text|safe }}
