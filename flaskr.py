@@ -4,6 +4,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, render_t
 from contextlib import closing
 from datetime import datetime
 from flask.ext.paginate import Pagination
+from flask.ext.misaka import Misaka
 
 #configuration
 DATABASE = '/tmp/flaskr.db'
@@ -15,6 +16,7 @@ PASSWORD = '12345'
 #app section
 app = Flask(__name__)
 app.config.from_object(__name__)
+Misaka(app)
 
 def connect_db():
 	return sqlite3.connect(app.config['DATABASE'])

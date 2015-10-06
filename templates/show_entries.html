@@ -12,10 +12,9 @@
     </form>
   {% endif %}
   <ul class=entries>
-    {{ pagination.info }}
     {{ pagination.links }}
   {% for entry in entries %}
-    <li><h2><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><h3>{{entry.time}}</h3>{{ entry.text|safe }}
+    <li><h2><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><h3>{{entry.time}}</h3>{{ entry.text|safe|markdown }}
   {% else %}
     <li><em>No entries here...</em>
   {% endfor %}
