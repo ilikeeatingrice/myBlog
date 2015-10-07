@@ -1,27 +1,28 @@
 <!doctype html>
-<title>I Love Pig</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
-<script>
-$(document).ready(function() {
-  $('p code').each(function(i, block) {
-    hljs.highlightBlock(block);
+<html lang="en">
+<head>
+  <title>I Love Pig</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/default.min.css">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    $('p code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
   });
-});
-</script>
+  </script>
+</head>
 <div class=page>
-  <h1><a style="color:black; text-decoration:none" href = "{{url_for('show_entries')}}">Piggyland</a></h1>
-  <div class=metanav>
-  {% if not session.logged_in %}
-    <a href="{{ url_for('login') }}">log in</a>
-  {% else %}
-    <a href="{{ url_for('logout') }}">log out</a>
-  {% endif %}
-  </div>
+  <h1 id="site_title"><a href = "{{url_for('show_entries')}}">Piggyland</a></h1>
+   <hr size=1>
   {% for message in get_flashed_messages() %}
-    <div class=flash>{{ message }}</div>
+  <div class=flash>{{ message }}</div>
   {% endfor %}
   {% block body %}{% endblock %}
 </div>
+</html>
