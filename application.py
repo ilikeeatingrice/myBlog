@@ -8,7 +8,7 @@ from flask.ext.misaka import Misaka
 from flask.ext.triangle import Triangle
 
 #configuration
-DATABASE = '/tmp/flaskr.db'
+DATABASE = 'flaskr.db'
 DEBUG = True
 SECRET_KEY = "eat rice"
 USERNAME = 'don.jobs'
@@ -106,6 +106,6 @@ def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
     return redirect(url_for('show_entries'))
-    
+
 if __name__ == '__main__':
 	application.run()
