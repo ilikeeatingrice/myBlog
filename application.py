@@ -12,7 +12,7 @@ DATABASE = 'flaskr.db'
 DEBUG = True
 SECRET_KEY = "eat rice"
 USERNAME = 'don.jobs'
-PASSWORD = '12345'
+PASSWORD = '21654321'
 
 #app section
 application = Flask(__name__)
