@@ -1,0 +1,361 @@
+Retrieving logs...
+============= i-087071ce ==============
+-------------------------------------
+/var/log/eb-version-deployment.log
+-------------------------------------
+2015-10-14 18:48:33,567 [INFO] Found the latest version manifest file <Key: elasticbeanstalk-us-west-2-900471794277,resources/environments/e-z2jqsn4kzb/_runtime/versions/manifest_1444848342065> from bucket elasticbeanstalk-us-west-2-900471794277 and prefix resources/environments/e-z2jqsn4kzb/_runtime/versions/
+2015-10-14 18:48:33,628 [INFO] Downloaded the manifest file to /tmp/version_file_manifest
+2015-10-14 18:48:33,752 [INFO] Downloaded version label Sample Application from s3 key <Key: elasticbeanstalk-us-west-2-900471794277,resources/environments/e-z2jqsn4kzb/_runtime/_versions/blogtiancheng/Sample Application>
+2015-10-14 19:07:34,550 [INFO] Version manifest file name already known. The latest version manifest file key is resources/environments/e-z2jqsn4kzb/_runtime/versions/manifest_1444849611958
+2015-10-14 19:07:34,625 [INFO] Downloaded the manifest file to /tmp/version_file_manifest
+2015-10-14 19:07:34,701 [INFO] Downloaded version label myBlog-0.1 from s3 key <Key: elasticbeanstalk-us-west-2-900471794277,resources/environments/e-z2jqsn4kzb/_runtime/_versions/blogtiancheng/myBlog-0.1>
+
+
+
+-------------------------------------
+/opt/python/log/httpd.out
+-------------------------------------
+[Wed Oct 14 18:49:38.816271 2015] [so:warn] [pid 1787] AH01574: module wsgi_module is already loaded, skipping
+[Wed Oct 14 19:07:42.843189 2015] [so:warn] [pid 2245] AH01574: module wsgi_module is already loaded, skipping
+[Thu Oct 15 16:00:36.944781 2015] [so:warn] [pid 10234] AH01574: module wsgi_module is already loaded, skipping
+[Thu Oct 15 16:16:18.680796 2015] [so:warn] [pid 10599] AH01574: module wsgi_module is already loaded, skipping
+
+
+
+-------------------------------------
+/opt/python/log/supervisord.log
+-------------------------------------
+2015-10-14 18:48:54,937 CRIT Supervisor running as root (no user in config file)
+2015-10-14 18:48:54,992 INFO RPC interface 'supervisor' initialized
+2015-10-14 18:48:54,992 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2015-10-14 18:48:54,993 INFO supervisord started with pid 1576
+2015-10-14 18:48:56,000 INFO spawned: 'httpd' with pid 1654
+2015-10-14 18:48:57,002 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-10-14 18:49:37,733 INFO stopped: httpd (exit status 0)
+2015-10-14 18:49:38,745 INFO spawned: 'httpd' with pid 1787
+2015-10-14 18:49:39,817 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-10-14 19:07:41,760 INFO stopped: httpd (exit status 0)
+2015-10-14 19:07:42,776 INFO spawned: 'httpd' with pid 2245
+2015-10-14 19:07:43,845 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-10-15 16:00:35,861 INFO stopped: httpd (exit status 0)
+2015-10-15 16:00:36,874 INFO spawned: 'httpd' with pid 10234
+2015-10-15 16:00:37,946 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2015-10-15 16:16:17,596 INFO stopped: httpd (exit status 0)
+2015-10-15 16:16:18,609 INFO spawned: 'httpd' with pid 10599
+2015-10-15 16:16:19,682 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+
+
+
+-------------------------------------
+/var/log/httpd/error_log
+-------------------------------------
+[Wed Oct 14 18:48:56.707175 2015] [suexec:notice] [pid 1654] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Oct 14 18:48:56.731926 2015] [auth_digest:notice] [pid 1654] AH01757: generating secret for digest authentication ...
+[Wed Oct 14 18:48:56.733044 2015] [lbmethod_heartbeat:notice] [pid 1654] AH02282: No slotmem from mod_heartmonitor
+[Wed Oct 14 18:48:56.780139 2015] [mpm_prefork:notice] [pid 1654] AH00163: Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 configured -- resuming normal operations
+[Wed Oct 14 18:48:56.780210 2015] [core:notice] [pid 1654] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Oct 14 18:49:37.715982 2015] [mpm_prefork:notice] [pid 1654] AH00169: caught SIGTERM, shutting down
+[Wed Oct 14 18:49:38.825768 2015] [suexec:notice] [pid 1787] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Oct 14 18:49:38.854341 2015] [so:warn] [pid 1787] AH01574: module wsgi_module is already loaded, skipping
+[Wed Oct 14 18:49:38.859086 2015] [auth_digest:notice] [pid 1787] AH01757: generating secret for digest authentication ...
+[Wed Oct 14 18:49:38.864102 2015] [lbmethod_heartbeat:notice] [pid 1787] AH02282: No slotmem from mod_heartmonitor
+[Wed Oct 14 18:49:38.895282 2015] [mpm_prefork:notice] [pid 1787] AH00163: Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 configured -- resuming normal operations
+[Wed Oct 14 18:49:38.895364 2015] [core:notice] [pid 1787] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Oct 14 19:07:41.743614 2015] [mpm_prefork:notice] [pid 1787] AH00169: caught SIGTERM, shutting down
+[Wed Oct 14 19:07:42.854288 2015] [suexec:notice] [pid 2245] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Wed Oct 14 19:07:42.882860 2015] [so:warn] [pid 2245] AH01574: module wsgi_module is already loaded, skipping
+[Wed Oct 14 19:07:42.887753 2015] [auth_digest:notice] [pid 2245] AH01757: generating secret for digest authentication ...
+[Wed Oct 14 19:07:42.889165 2015] [lbmethod_heartbeat:notice] [pid 2245] AH02282: No slotmem from mod_heartmonitor
+[Wed Oct 14 19:07:42.923216 2015] [mpm_prefork:notice] [pid 2245] AH00163: Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 configured -- resuming normal operations
+[Wed Oct 14 19:07:42.923293 2015] [core:notice] [pid 2245] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Wed Oct 14 19:07:45.566269 2015] [:error] [pid 2249] [client 127.0.0.1:33265] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Wed Oct 14 19:08:32.219455 2015] [:error] [pid 2249] [client 172.31.0.58:27440] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Wed Oct 14 19:08:32.397394 2015] [:error] [pid 2249] [client 172.31.0.58:27440] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py, referer: http://blogtiancheng-env.elasticbeanstalk.com/
+[Wed Oct 14 19:09:25.370800 2015] [:error] [pid 2307] [client 172.31.0.58:27453] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Wed Oct 14 19:15:50.926745 2015] [:error] [pid 2301] [client 172.31.0.58:27629] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Wed Oct 14 21:28:32.879916 2015] [:error] [pid 2250] [client 172.31.0.58:30968] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Wed Oct 14 23:20:54.025420 2015] [:error] [pid 2316] [client 172.31.0.58:33804] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Thu Oct 15 01:34:38.439723 2015] [:error] [pid 2249] [client 172.31.43.55:18234] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Thu Oct 15 11:14:50.763496 2015] [:error] [pid 2317] [client 172.31.43.55:32766] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Thu Oct 15 11:28:38.094757 2015] [:error] [pid 2249] [client 172.31.43.55:33099] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Thu Oct 15 11:28:50.623071 2015] [:error] [pid 2307] [client 172.31.43.55:33123] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Thu Oct 15 11:28:50.628444 2015] [:error] [pid 2307] [client 172.31.43.55:33123] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Thu Oct 15 11:28:52.926752 2015] [:error] [pid 2307] [client 172.31.43.55:33123] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Thu Oct 15 12:02:49.958647 2015] [:error] [pid 2301] [client 172.31.43.55:33965] Target WSGI script not found or unable to stat: /opt/python/current/app/application.py
+[Thu Oct 15 16:00:35.845141 2015] [mpm_prefork:notice] [pid 2245] AH00169: caught SIGTERM, shutting down
+[Thu Oct 15 16:00:36.957700 2015] [suexec:notice] [pid 10234] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Oct 15 16:00:36.985515 2015] [so:warn] [pid 10234] AH01574: module wsgi_module is already loaded, skipping
+[Thu Oct 15 16:00:36.990618 2015] [auth_digest:notice] [pid 10234] AH01757: generating secret for digest authentication ...
+[Thu Oct 15 16:00:36.995888 2015] [lbmethod_heartbeat:notice] [pid 10234] AH02282: No slotmem from mod_heartmonitor
+[Thu Oct 15 16:00:37.026449 2015] [mpm_prefork:notice] [pid 10234] AH00163: Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 configured -- resuming normal operations
+[Thu Oct 15 16:00:37.026557 2015] [core:notice] [pid 10234] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Oct 15 16:00:39.669590 2015] [:error] [pid 10239] [client 127.0.0.1:37209] Target WSGI script not found or unable to stat: /opt/python/current/app/flaskr.py
+[Thu Oct 15 16:16:17.576507 2015] [mpm_prefork:notice] [pid 10234] AH00169: caught SIGTERM, shutting down
+[Thu Oct 15 16:16:18.692643 2015] [suexec:notice] [pid 10599] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Thu Oct 15 16:16:18.722469 2015] [so:warn] [pid 10599] AH01574: module wsgi_module is already loaded, skipping
+[Thu Oct 15 16:16:18.727993 2015] [auth_digest:notice] [pid 10599] AH01757: generating secret for digest authentication ...
+[Thu Oct 15 16:16:18.733267 2015] [lbmethod_heartbeat:notice] [pid 10599] AH02282: No slotmem from mod_heartmonitor
+[Thu Oct 15 16:16:18.762400 2015] [mpm_prefork:notice] [pid 10599] AH00163: Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 configured -- resuming normal operations
+[Thu Oct 15 16:16:18.762486 2015] [core:notice] [pid 10599] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Oct 15 16:16:21.415973 2015] [:error] [pid 10604] [client 127.0.0.1:37266] Target WSGI script not found or unable to stat: /opt/python/current/app/Flaskr
+[Thu Oct 15 16:18:21.492317 2015] [:error] [pid 10605] [client 172.31.43.55:40385] Target WSGI script not found or unable to stat: /opt/python/current/app/Flaskr
+
+
+
+-------------------------------------
+/var/log/httpd/access_log
+-------------------------------------
+127.0.0.1 (-) - - [14/Oct/2015:18:49:41 +0000] "GET / HTTP/1.1" 200 3462 "-" "Python-urllib/2.7"
+172.31.0.58 (159.140.254.98) - - [14/Oct/2015:18:52:15 +0000] "GET / HTTP/1.1" 200 3462 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+172.31.0.58 (159.140.254.98) - - [14/Oct/2015:18:52:15 +0000] "GET /favicon.ico HTTP/1.1" 200 3462 "http://blogtiancheng-env.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+::1 (-) - - [14/Oct/2015:18:53:20 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [14/Oct/2015:18:53:37 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+127.0.0.1 (-) - - [14/Oct/2015:19:07:45 +0000] "GET / HTTP/1.1" 404 198 "-" "Python-urllib/2.7"
+172.31.0.58 (159.140.254.98) - - [14/Oct/2015:19:08:32 +0000] "GET / HTTP/1.1" 404 198 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+172.31.0.58 (159.140.254.98) - - [14/Oct/2015:19:08:32 +0000] "GET /favicon.ico HTTP/1.1" 404 209 "http://blogtiancheng-env.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+172.31.0.58 (159.140.254.98) - - [14/Oct/2015:19:09:25 +0000] "GET / HTTP/1.1" 404 198 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+::1 (-) - - [14/Oct/2015:19:09:37 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [14/Oct/2015:19:09:38 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+172.31.0.58 (159.140.254.98) - - [14/Oct/2015:19:15:50 +0000] "GET / HTTP/1.1" 404 198 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+172.31.0.58 (159.140.254.98) - - [14/Oct/2015:21:28:32 +0000] "GET / HTTP/1.1" 404 198 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+172.31.0.58 (54.183.93.138) - - [14/Oct/2015:23:20:54 +0000] "GET / HTTP/1.1" 404 198 "-" "Mozilla/5.0 (Windows NT 6.3; rv:36.0 Gecko/20100101 Firefox/36.0"
+172.31.43.55 (185.49.14.190) - - [15/Oct/2015:01:34:38 +0000] "GET /testproxy.php HTTP/1.1" 404 211 "-" "Mozilla/5.0 (Windows NT 5.1; rv:32.0) Gecko/20100101 Firefox/31.0"
+172.31.43.55 (141.212.122.160) - - [15/Oct/2015:11:14:50 +0000] "GET / HTTP/1.1" 404 198 "-" "Mozilla/5.0 zgrab/0.x"
+172.31.43.55 (61.49.45.44) - - [15/Oct/2015:11:28:38 +0000] "GET / HTTP/1.1" 404 198 "-" "-"
+172.31.43.55 (61.49.45.44) - - [15/Oct/2015:11:28:50 +0000] "GET / HTTP/1.1" 404 198 "-" "-"
+172.31.43.55 (61.49.45.44) - - [15/Oct/2015:11:28:50 +0000] "GET / HTTP/1.1" 404 198 "-" "Mozilla/5.0 (compatible; Nmap Scripting Engine; http://nmap.org/book/nse.html)"
+172.31.43.55 (61.49.45.44) - - [15/Oct/2015:11:28:52 +0000] "GET / HTTP/1.1" 404 198 "-" "-"
+::1 (-) - - [15/Oct/2015:11:29:50 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [15/Oct/2015:11:29:51 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [15/Oct/2015:11:29:52 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [15/Oct/2015:11:29:53 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [15/Oct/2015:11:29:54 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [15/Oct/2015:11:29:58 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+::1 (-) - - [15/Oct/2015:11:29:59 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+172.31.43.55 (91.196.50.33) - - [15/Oct/2015:12:02:49 +0000] "GET /testproxy.php HTTP/1.1" 404 211 "-" "Mozilla/5.0 (Windows NT 5.1; rv:32.0) Gecko/20100101 Firefox/31.0"
+127.0.0.1 (-) - - [15/Oct/2015:16:00:39 +0000] "GET / HTTP/1.1" 404 198 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [15/Oct/2015:16:16:21 +0000] "GET / HTTP/1.1" 404 198 "-" "Python-urllib/2.7"
+172.31.43.55 (159.140.254.105) - - [15/Oct/2015:16:18:21 +0000] "GET / HTTP/1.1" 404 198 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36"
+::1 (-) - - [15/Oct/2015:16:19:25 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.12 (Amazon) mod_wsgi/3.5 Python/3.4.3 (internal dummy connection)"
+
+
+
+-------------------------------------
+/opt/python/log/sample-app.log
+-------------------------------------
+
+
+
+
+-------------------------------------
+/var/log/eb-activity.log
+-------------------------------------
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/post.
+[2015-10-14T19:07:45.807Z] INFO  [2118]  - [Application update/AppDeployStage1] : Completed activity. Result:
+  Application version switch - Command CMD-AppDeploy stage 1 completed
+[2015-10-14T19:07:45.808Z] INFO  [2118]  - [Application update/AddonsAfter] : Starting activity...
+[2015-10-14T19:07:45.808Z] INFO  [2118]  - [Application update/AddonsAfter/ConfigLogRotation] : Starting activity...
+[2015-10-14T19:07:45.808Z] INFO  [2118]  - [Application update/AddonsAfter/ConfigLogRotation/10-config.sh] : Starting activity...
+[2015-10-14T19:07:46.013Z] INFO  [2118]  - [Application update/AddonsAfter/ConfigLogRotation/10-config.sh] : Completed activity. Result:
+  Disabled forced hourly log rotation.
+[2015-10-14T19:07:46.014Z] INFO  [2118]  - [Application update/AddonsAfter/ConfigLogRotation] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/addons/logpublish/hooks/config.
+[2015-10-14T19:07:46.014Z] INFO  [2118]  - [Application update/AddonsAfter] : Completed activity.
+[2015-10-14T19:07:46.014Z] INFO  [2118]  - [Application update] : Completed activity. Result:
+  Application update - Command CMD-AppDeploy succeeded
+[2015-10-15T16:00:30.664Z] INFO  [10157] - [Configuration update] : Starting activity...
+[2015-10-15T16:00:31.030Z] INFO  [10157] - [Configuration update/AddonsBefore] : Starting activity...
+[2015-10-15T16:00:31.030Z] INFO  [10157] - [Configuration update/AddonsBefore] : Completed activity.
+[2015-10-15T16:00:31.030Z] INFO  [10157] - [Configuration update/ConfigDeployStage0] : Starting activity...
+[2015-10-15T16:00:31.030Z] INFO  [10157] - [Configuration update/ConfigDeployStage0/InfraWriteConfig] : Starting activity...
+[2015-10-15T16:00:31.035Z] INFO  [10157] - [Configuration update/ConfigDeployStage0/InfraWriteConfig] : Completed activity. Result:
+  Recreated directory /opt/elasticbeanstalk/deploy/configuration/.
+  Generate appsource url file at /opt/elasticbeanstalk/deploy/configuration/appsourceurl.
+  Generate container config file at /opt/elasticbeanstalk/deploy/configuration/containerconfiguration.
+[2015-10-15T16:00:31.036Z] INFO  [10157] - [Configuration update/ConfigDeployStage0/ConfigDeployPreHook] : Starting activity...
+[2015-10-15T16:00:31.036Z] INFO  [10157] - [Configuration update/ConfigDeployStage0/ConfigDeployPreHook/01generate.py] : Starting activity...
+[2015-10-15T16:00:34.681Z] INFO  [10157] - [Configuration update/ConfigDeployStage0/ConfigDeployPreHook/01generate.py] : Completed activity. Result:
+  2015-10-15 16:00:34,668 ERROR    The specified WSGIPath of "flaskr.py" was not found in the source bundle
+[2015-10-15T16:00:34.681Z] INFO  [10157] - [Configuration update/ConfigDeployStage0/ConfigDeployPreHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/configdeploy/pre.
+[2015-10-15T16:00:34.682Z] INFO  [10157] - [Configuration update/ConfigDeployStage0] : Completed activity. Result:
+  Configuration update - Command CMD-ConfigDeploy stage 0 completed
+[2015-10-15T16:00:34.682Z] INFO  [10157] - [Configuration update/ConfigDeployStage1] : Starting activity...
+[2015-10-15T16:00:34.682Z] INFO  [10157] - [Configuration update/ConfigDeployStage1/ConfigDeployEnactHook] : Starting activity...
+[2015-10-15T16:00:34.683Z] INFO  [10157] - [Configuration update/ConfigDeployStage1/ConfigDeployEnactHook/01flip.py] : Starting activity...
+[2015-10-15T16:00:39.888Z] INFO  [10157] - [Configuration update/ConfigDeployStage1/ConfigDeployEnactHook/01flip.py] : Completed activity. Result:
+  httpd: stopped
+  httpd: started
+  httpd                            RUNNING   pid 10234, uptime 0:00:03
+[2015-10-15T16:00:39.889Z] INFO  [10157] - [Configuration update/ConfigDeployStage1/ConfigDeployEnactHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/configdeploy/enact.
+[2015-10-15T16:00:39.889Z] INFO  [10157] - [Configuration update/ConfigDeployStage1/ConfigDeployPostHook] : Starting activity...
+[2015-10-15T16:00:39.889Z] INFO  [10157] - [Configuration update/ConfigDeployStage1/ConfigDeployPostHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/configdeploy/post.
+[2015-10-15T16:00:39.889Z] INFO  [10157] - [Configuration update/ConfigDeployStage1] : Completed activity. Result:
+  Application restart - Command CMD-ConfigDeploy stage 1 completed
+[2015-10-15T16:00:39.889Z] INFO  [10157] - [Configuration update/AddonsAfter] : Starting activity...
+[2015-10-15T16:00:39.889Z] INFO  [10157] - [Configuration update/AddonsAfter/ConfigLogRotation] : Starting activity...
+[2015-10-15T16:00:39.890Z] INFO  [10157] - [Configuration update/AddonsAfter/ConfigLogRotation/10-config.sh] : Starting activity...
+[2015-10-15T16:00:40.088Z] INFO  [10157] - [Configuration update/AddonsAfter/ConfigLogRotation/10-config.sh] : Completed activity. Result:
+  Disabled forced hourly log rotation.
+[2015-10-15T16:00:40.088Z] INFO  [10157] - [Configuration update/AddonsAfter/ConfigLogRotation] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/addons/logpublish/hooks/config.
+[2015-10-15T16:00:40.088Z] INFO  [10157] - [Configuration update/AddonsAfter] : Completed activity.
+[2015-10-15T16:00:40.089Z] INFO  [10157] - [Configuration update] : Completed activity. Result:
+  Configuration update - Command CMD-ConfigDeploy succeeded
+[2015-10-15T16:16:12.283Z] INFO  [10522] - [Configuration update] : Starting activity...
+[2015-10-15T16:16:12.722Z] INFO  [10522] - [Configuration update/AddonsBefore] : Starting activity...
+[2015-10-15T16:16:12.722Z] INFO  [10522] - [Configuration update/AddonsBefore] : Completed activity.
+[2015-10-15T16:16:12.722Z] INFO  [10522] - [Configuration update/ConfigDeployStage0] : Starting activity...
+[2015-10-15T16:16:12.722Z] INFO  [10522] - [Configuration update/ConfigDeployStage0/InfraWriteConfig] : Starting activity...
+[2015-10-15T16:16:12.727Z] INFO  [10522] - [Configuration update/ConfigDeployStage0/InfraWriteConfig] : Completed activity. Result:
+  Recreated directory /opt/elasticbeanstalk/deploy/configuration/.
+  Generate appsource url file at /opt/elasticbeanstalk/deploy/configuration/appsourceurl.
+  Generate container config file at /opt/elasticbeanstalk/deploy/configuration/containerconfiguration.
+[2015-10-15T16:16:12.728Z] INFO  [10522] - [Configuration update/ConfigDeployStage0/ConfigDeployPreHook] : Starting activity...
+[2015-10-15T16:16:12.728Z] INFO  [10522] - [Configuration update/ConfigDeployStage0/ConfigDeployPreHook/01generate.py] : Starting activity...
+[2015-10-15T16:16:16.380Z] INFO  [10522] - [Configuration update/ConfigDeployStage0/ConfigDeployPreHook/01generate.py] : Completed activity. Result:
+  2015-10-15 16:16:16,367 ERROR    The specified WSGIPath of "Flaskr/flaskr.py" was not found in the source bundle
+[2015-10-15T16:16:16.380Z] INFO  [10522] - [Configuration update/ConfigDeployStage0/ConfigDeployPreHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/configdeploy/pre.
+[2015-10-15T16:16:16.380Z] INFO  [10522] - [Configuration update/ConfigDeployStage0] : Completed activity. Result:
+  Configuration update - Command CMD-ConfigDeploy stage 0 completed
+[2015-10-15T16:16:16.381Z] INFO  [10522] - [Configuration update/ConfigDeployStage1] : Starting activity...
+[2015-10-15T16:16:16.381Z] INFO  [10522] - [Configuration update/ConfigDeployStage1/ConfigDeployEnactHook] : Starting activity...
+[2015-10-15T16:16:16.381Z] INFO  [10522] - [Configuration update/ConfigDeployStage1/ConfigDeployEnactHook/01flip.py] : Starting activity...
+[2015-10-15T16:16:21.640Z] INFO  [10522] - [Configuration update/ConfigDeployStage1/ConfigDeployEnactHook/01flip.py] : Completed activity. Result:
+  httpd: stopped
+  httpd: started
+  httpd                            RUNNING   pid 10599, uptime 0:00:03
+[2015-10-15T16:16:21.640Z] INFO  [10522] - [Configuration update/ConfigDeployStage1/ConfigDeployEnactHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/configdeploy/enact.
+[2015-10-15T16:16:21.640Z] INFO  [10522] - [Configuration update/ConfigDeployStage1/ConfigDeployPostHook] : Starting activity...
+[2015-10-15T16:16:21.641Z] INFO  [10522] - [Configuration update/ConfigDeployStage1/ConfigDeployPostHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/configdeploy/post.
+[2015-10-15T16:16:21.641Z] INFO  [10522] - [Configuration update/ConfigDeployStage1] : Completed activity. Result:
+  Application restart - Command CMD-ConfigDeploy stage 1 completed
+[2015-10-15T16:16:21.641Z] INFO  [10522] - [Configuration update/AddonsAfter] : Starting activity...
+[2015-10-15T16:16:21.641Z] INFO  [10522] - [Configuration update/AddonsAfter/ConfigLogRotation] : Starting activity...
+[2015-10-15T16:16:21.641Z] INFO  [10522] - [Configuration update/AddonsAfter/ConfigLogRotation/10-config.sh] : Starting activity...
+[2015-10-15T16:16:21.840Z] INFO  [10522] - [Configuration update/AddonsAfter/ConfigLogRotation/10-config.sh] : Completed activity. Result:
+  Disabled forced hourly log rotation.
+[2015-10-15T16:16:21.840Z] INFO  [10522] - [Configuration update/AddonsAfter/ConfigLogRotation] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/addons/logpublish/hooks/config.
+[2015-10-15T16:16:21.840Z] INFO  [10522] - [Configuration update/AddonsAfter] : Completed activity.
+[2015-10-15T16:16:21.840Z] INFO  [10522] - [Configuration update] : Completed activity. Result:
+  Configuration update - Command CMD-ConfigDeploy succeeded
+[2015-10-15T17:33:56.761Z] INFO  [11784] - [CMD-TailLogs - stage ] : Starting activity...
+[2015-10-15T17:33:57.179Z] INFO  [11784] - [CMD-TailLogs - stage /AddonsBefore] : Starting activity...
+[2015-10-15T17:33:57.179Z] INFO  [11784] - [CMD-TailLogs - stage /AddonsBefore] : Completed activity.
+[2015-10-15T17:33:57.179Z] INFO  [11784] - [CMD-TailLogs - stage /TailLogs] : Starting activity...
+[2015-10-15T17:33:57.179Z] INFO  [11784] - [CMD-TailLogs - stage /TailLogs/TailLogs] : Starting activity...
+
+
+
+-------------------------------------
+/var/log/eb-commandprocessor.log
+-------------------------------------
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"Your WSGIPath refers to a file that does not exist.","severity":"ERROR","timestamp":1444849660}]}]}
+[2015-10-15T16:00:30.661Z] DEBUG [10157] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2015-10-15T16:00:30.662Z] DEBUG [10157] : Checking if the command processor should execute...
+[2015-10-15T16:00:30.663Z] DEBUG [10157] : Checking whether the command is applicable to instance (i-087071ce)..
+[2015-10-15T16:00:30.663Z] INFO  [10157] : Command is applicable to this instance (i-087071ce)..
+[2015-10-15T16:00:30.663Z] DEBUG [10157] : Checking if the received command stage is valid..
+[2015-10-15T16:00:30.663Z] INFO  [10157] : No stage_num in command. Valid stage..
+[2015-10-15T16:00:30.664Z] INFO  [10157] : Received command CMD-ConfigDeploy: {"instance_ids":["i-087071ce"],"command_name":"CMD-ConfigDeploy","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"c28db80a-7355-11e5-a997-a31a2428acd6","command_timeout":"600"}
+[2015-10-15T16:00:30.664Z] INFO  [10157] : Command processor should execute command.
+[2015-10-15T16:00:30.664Z] DEBUG [10157] : Storing current stage..
+[2015-10-15T16:00:30.664Z] DEBUG [10157] : Stage_num does not exist. Not saving null stage. Returning..
+[2015-10-15T16:00:30.664Z] INFO  [10157] : Executing Configuration update
+[2015-10-15T16:00:30.665Z] INFO  [10157] : Executing command: CMD-ConfigDeploy...
+[2015-10-15T16:00:30.665Z] DEBUG [10157] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2015-10-15T16:00:30.665Z] DEBUG [10157] : Refreshing metadata..
+[2015-10-15T16:00:31.024Z] DEBUG [10157] : Refreshed environment metadata.
+[2015-10-15T16:00:31.024Z] DEBUG [10157] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2015-10-15T16:00:31.026Z] DEBUG [10157] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2015-10-15T16:00:31.027Z] INFO  [10157] : Found enabled addons: ["logpublish"].
+[2015-10-15T16:00:31.029Z] INFO  [10157] : Updating Command definition of addon logpublish.
+[2015-10-15T16:00:31.029Z] DEBUG [10157] : Loaded definition of Command CMD-ConfigDeploy.
+[2015-10-15T16:00:31.030Z] INFO  [10157] : Executing command CMD-ConfigDeploy activities...
+[2015-10-15T16:00:31.030Z] DEBUG [10157] : Setting environment variables..
+[2015-10-15T16:00:31.030Z] INFO  [10157] : Running AddonsBefore for command CMD-ConfigDeploy...
+[2015-10-15T16:00:31.030Z] DEBUG [10157] : Running stages of Command CMD-ConfigDeploy from stage 0 to stage 1...
+[2015-10-15T16:00:31.030Z] INFO  [10157] : Running stage 0 of command CMD-ConfigDeploy...
+[2015-10-15T16:00:31.030Z] DEBUG [10157] : Loaded 2 actions for stage 0.
+[2015-10-15T16:00:31.030Z] INFO  [10157] : Running 1 of 2 actions: InfraWriteConfig...
+[2015-10-15T16:00:31.035Z] INFO  [10157] : Running 2 of 2 actions: ConfigDeployPreHook...
+[2015-10-15T16:00:34.682Z] INFO  [10157] : Running stage 1 of command CMD-ConfigDeploy...
+[2015-10-15T16:00:34.682Z] DEBUG [10157] : Loaded 2 actions for stage 1.
+[2015-10-15T16:00:34.682Z] INFO  [10157] : Running 1 of 2 actions: ConfigDeployEnactHook...
+[2015-10-15T16:00:39.889Z] INFO  [10157] : Running 2 of 2 actions: ConfigDeployPostHook...
+[2015-10-15T16:00:39.889Z] INFO  [10157] : Running AddonsAfter for command CMD-ConfigDeploy...
+[2015-10-15T16:00:40.088Z] INFO  [10157] : Command CMD-ConfigDeploy succeeded!
+[2015-10-15T16:00:40.090Z] INFO  [10157] : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"Your WSGIPath refers to a file that does not exist.","severity":"ERROR","timestamp":1444924834}]}]}
+[2015-10-15T16:16:12.279Z] DEBUG [10522] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2015-10-15T16:16:12.279Z] DEBUG [10522] : Checking if the command processor should execute...
+[2015-10-15T16:16:12.281Z] DEBUG [10522] : Checking whether the command is applicable to instance (i-087071ce)..
+[2015-10-15T16:16:12.281Z] INFO  [10522] : Command is applicable to this instance (i-087071ce)..
+[2015-10-15T16:16:12.281Z] DEBUG [10522] : Checking if the received command stage is valid..
+[2015-10-15T16:16:12.281Z] INFO  [10522] : No stage_num in command. Valid stage..
+[2015-10-15T16:16:12.282Z] INFO  [10522] : Received command CMD-ConfigDeploy: {"instance_ids":["i-087071ce"],"command_name":"CMD-ConfigDeploy","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"f3aeb460-7357-11e5-9253-392f835ffe14","command_timeout":"600"}
+[2015-10-15T16:16:12.282Z] INFO  [10522] : Command processor should execute command.
+[2015-10-15T16:16:12.282Z] DEBUG [10522] : Storing current stage..
+[2015-10-15T16:16:12.282Z] DEBUG [10522] : Stage_num does not exist. Not saving null stage. Returning..
+[2015-10-15T16:16:12.283Z] INFO  [10522] : Executing Configuration update
+[2015-10-15T16:16:12.283Z] INFO  [10522] : Executing command: CMD-ConfigDeploy...
+[2015-10-15T16:16:12.283Z] DEBUG [10522] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2015-10-15T16:16:12.283Z] DEBUG [10522] : Refreshing metadata..
+[2015-10-15T16:16:12.716Z] DEBUG [10522] : Refreshed environment metadata.
+[2015-10-15T16:16:12.716Z] DEBUG [10522] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2015-10-15T16:16:12.718Z] DEBUG [10522] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2015-10-15T16:16:12.719Z] INFO  [10522] : Found enabled addons: ["logpublish"].
+[2015-10-15T16:16:12.721Z] INFO  [10522] : Updating Command definition of addon logpublish.
+[2015-10-15T16:16:12.721Z] DEBUG [10522] : Loaded definition of Command CMD-ConfigDeploy.
+[2015-10-15T16:16:12.722Z] INFO  [10522] : Executing command CMD-ConfigDeploy activities...
+[2015-10-15T16:16:12.722Z] DEBUG [10522] : Setting environment variables..
+[2015-10-15T16:16:12.722Z] INFO  [10522] : Running AddonsBefore for command CMD-ConfigDeploy...
+[2015-10-15T16:16:12.722Z] DEBUG [10522] : Running stages of Command CMD-ConfigDeploy from stage 0 to stage 1...
+[2015-10-15T16:16:12.722Z] INFO  [10522] : Running stage 0 of command CMD-ConfigDeploy...
+[2015-10-15T16:16:12.722Z] DEBUG [10522] : Loaded 2 actions for stage 0.
+[2015-10-15T16:16:12.722Z] INFO  [10522] : Running 1 of 2 actions: InfraWriteConfig...
+[2015-10-15T16:16:12.728Z] INFO  [10522] : Running 2 of 2 actions: ConfigDeployPreHook...
+[2015-10-15T16:16:16.380Z] INFO  [10522] : Running stage 1 of command CMD-ConfigDeploy...
+[2015-10-15T16:16:16.381Z] DEBUG [10522] : Loaded 2 actions for stage 1.
+[2015-10-15T16:16:16.381Z] INFO  [10522] : Running 1 of 2 actions: ConfigDeployEnactHook...
+[2015-10-15T16:16:21.640Z] INFO  [10522] : Running 2 of 2 actions: ConfigDeployPostHook...
+[2015-10-15T16:16:21.641Z] INFO  [10522] : Running AddonsAfter for command CMD-ConfigDeploy...
+[2015-10-15T16:16:21.840Z] INFO  [10522] : Command CMD-ConfigDeploy succeeded!
+[2015-10-15T16:16:21.842Z] INFO  [10522] : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"Your WSGIPath refers to a file that does not exist.","severity":"ERROR","timestamp":1444925776}]}]}
+[2015-10-15T17:33:56.757Z] DEBUG [11784] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2015-10-15T17:33:56.758Z] DEBUG [11784] : Checking if the command processor should execute...
+[2015-10-15T17:33:56.759Z] DEBUG [11784] : Checking whether the command is applicable to instance (i-087071ce)..
+[2015-10-15T17:33:56.759Z] INFO  [11784] : Command is applicable to this instance (i-087071ce)..
+[2015-10-15T17:33:56.759Z] DEBUG [11784] : Checking if the received command stage is valid..
+[2015-10-15T17:33:56.759Z] INFO  [11784] : No stage_num in command. Valid stage..
+[2015-10-15T17:33:56.760Z] INFO  [11784] : Received command CMD-TailLogs: {"execution_data":"{\"aws_access_key_id\":\"ASIAIVDBDOR6JN54XMPA\",\"signature\":\"Yw\\\/k77u\\\/vFvpKRk9JnmZFpU8uo8=\",\"security_token\":\"AQoDYXdzEDMaoAK40CKRO7a43LvK786sgC+CDhBbGwj7LnZte6rWIY4HCLNiMqqIvlFf6QWwt5BwvtkM8jnW\\\/nEeI3Z+oPDxMPZXFuEt9BeR9EnpYIe7NBj9IKjYDm6ASY4UfmuXVIwiP0yBD7039dnCmpYx+rnwFV5NKXqaF49b\\\/4l6vWgaZ7jrq9euJrAS+hGyQay2J7ZmX75OhKEDgNIzmpPqsfXf3nCUKZ6dBxlfublq83VhRKeQAByUZDYwdUtI6B\\\/Akj\\\/p8AOKuUF0SGxyO4C4dEFFOT8jCT54idqL0tUo0YzZBnVKkL5SKw+kJvrsSGzxtXZn8pPln4R9D7LWIrRLexMsK5eDIwGvcqs\\\/aCZSCCNsK1P+bdNXVHO4w2Q2bqVc1cFqJ9oggsf\\\/sAU=\",\"policy\":\"eyJleHBpcmF0aW9uIjoiMjAxNS0xMC0xNVQxODowMzo1NC42NDRaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkeC1hbXotbWV0YS10aW1lX3N0YW1wIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLXB1Ymxpc2hfbWVjaGFuaXNtIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJyZXNvdXJjZXNcL2Vudmlyb25tZW50c1wvbG9nc1wvIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWJhdGNoX2lkIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWZpbGVfbmFtZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIkeC1hbXotc2VjdXJpdHktdG9rZW4iLCIiXSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsiZXEiLCIkYnVja2V0IiwiZWxhc3RpY2JlYW5zdGFsay11cy13ZXN0LTItOTAwNDcxNzk0Mjc3Il0sWyJlcSIsIiRhY2wiLCJwcml2YXRlIl1dfQ==\"}","instance_ids":["i-087071ce"],"data":"e832074d-7362-11e5-a997-a31a2428acd6","command_name":"CMD-TailLogs","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"e832074d-7362-11e5-a997-a31a2428acd6","command_timeout":"600"}
+[2015-10-15T17:33:56.760Z] INFO  [11784] : Command processor should execute command.
+[2015-10-15T17:33:56.760Z] DEBUG [11784] : Storing current stage..
+[2015-10-15T17:33:56.760Z] DEBUG [11784] : Stage_num does not exist. Not saving null stage. Returning..
+[2015-10-15T17:33:56.760Z] INFO  [11784] : Executing CMD-TailLogs - stage 
+[2015-10-15T17:33:56.761Z] INFO  [11784] : Executing command: CMD-TailLogs...
+[2015-10-15T17:33:56.761Z] DEBUG [11784] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2015-10-15T17:33:56.761Z] DEBUG [11784] : Refreshing metadata..
+[2015-10-15T17:33:57.173Z] DEBUG [11784] : Refreshed environment metadata.
+[2015-10-15T17:33:57.173Z] DEBUG [11784] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2015-10-15T17:33:57.174Z] DEBUG [11784] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2015-10-15T17:33:57.176Z] INFO  [11784] : Found enabled addons: ["logpublish"].
+[2015-10-15T17:33:57.178Z] INFO  [11784] : Updating Command definition of addon logpublish.
+[2015-10-15T17:33:57.178Z] DEBUG [11784] : Loaded definition of Command CMD-TailLogs.
+[2015-10-15T17:33:57.178Z] INFO  [11784] : Executing command CMD-TailLogs activities...
+[2015-10-15T17:33:57.178Z] DEBUG [11784] : Setting environment variables..
+[2015-10-15T17:33:57.178Z] INFO  [11784] : Running AddonsBefore for command CMD-TailLogs...
+[2015-10-15T17:33:57.179Z] DEBUG [11784] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2015-10-15T17:33:57.179Z] INFO  [11784] : Running stage 0 of command CMD-TailLogs...
+[2015-10-15T17:33:57.179Z] DEBUG [11784] : Loaded 1 actions for stage 0.
+[2015-10-15T17:33:57.179Z] INFO  [11784] : Running 1 of 1 actions: TailLogs...
+
+
+
