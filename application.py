@@ -15,25 +15,25 @@ USERNAME = 'don.jobs'
 PASSWORD = '12345'
 
 #app section
-app = Flask(__name__)
-app.config.from_object(__name__)
-Misaka(app)
-Triangle(app)
+application = Flask(__name__)
+application.config.from_object(__name__)
+Misaka(application)
+Triangle(application)
 
 def connect_db():
-	return sqlite3.connect(app.config['DATABASE'])
+	return sqlite3.connect(application.config['DATABASE'])
 
-@app.before_request
+@application.before_request
 def before_request():
     g.db = connect_db()
 
-@app.teardown_request
+@application.teardown_request
 def teardown_request(exception):
     db = getattr(g, 'db', None)
     if db is not None:
         db.close()
 
-@app.route('/')
+@application.route('/')
 def show_entries():
     search = False
     q = request.args.get('q')
@@ -48,7 +48,7 @@ def show_entries():
     pagination = Pagination(page=page, total=len(entries), search=search, record_name='entries')
     return render_template('show_entries.html', entries=entries, pagination=pagination,)
 
-@app.route('/entry/<entryId>')
+@application.route('/entry/<entryId>')
 def show_entry(entryId):
     cur = g.db.execute('select title, text, time from entries where id = ?', [entryId])
     row = cur.fetchall()
@@ -58,7 +58,7 @@ def show_entry(entryId):
     else:
         return show_entries()
 
-@app.route('/add', methods=['POST'])
+@application.route('/add', methods=['POST'])
 def add_entry():
     if not session.get('logged_in'):
         abort(401)
@@ -68,7 +68,7 @@ def add_entry():
     flash('New entry was successfully posted')
     return redirect(url_for('show_entries'))
 
-@app.route('/edit/<entryId>', methods=['POST'])
+@application.route('/edit/<entryId>', methods=['POST'])
 def edit_entry(entryId):
     if not session.get('logged_in'):
         abort(401)
@@ -78,7 +78,7 @@ def edit_entry(entryId):
     flash('Entry was successfully updated')
     return redirect(url_for('show_entries'))
 
-@app.route('/delete/<entryId>')
+@application.route('/delete/<entryId>')
 def delete_entry(entryId):
     if not session.get('logged_in'):
         abort(401)
@@ -87,13 +87,13 @@ def delete_entry(entryId):
     flash('Entry was successfully deleted')
     return redirect(url_for('show_entries'))
 
-@app.route('/login', methods=['GET', 'POST'])
+@application.route('/login', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != app.config['USERNAME']:
+        if request.form['username'] != application.config['USERNAME']:
             error = 'Invalid username'
-        elif request.form['password'] != app.config['PASSWORD']:
+        elif request.form['password'] != application.config['PASSWORD']:
             error = 'Invalid password'
         else:
             session['logged_in'] = True
@@ -101,11 +101,11 @@ def login():
             return redirect(url_for('show_entries'))
     return render_template('login.html', error=error)
 
-@app.route('/logout')
+@application.route('/logout')
 def logout():
     session.pop('logged_in', None)
     flash('You were logged out')
     return redirect(url_for('show_entries'))
-
+    
 if __name__ == '__main__':
-	app.run()
+	application.run()
