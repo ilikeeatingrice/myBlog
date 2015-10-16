@@ -22,10 +22,19 @@
   <div id = "menu">
   <h1 id="site_title"><a href = "{{url_for('show_entries')}}">Piggyland</a></h1>
 </div>
+  </div>
+  <div class="nav">
+    <ul>
+      <li class="home"><a href="#header">Blog</a></li>
+      <li class="Hometown"><a href="#hometown">About</a></li>
+      <li class="Hometown"><a href="#hometown">About</a></li>
+    </ul>
+  </div>
    <hr size=1>
   {% for message in get_flashed_messages() %}
   <div class=flash>{{ message }}</div>
   {% endfor %}
+
   {% block body %}{% endblock %}
 </div>
 </html>
