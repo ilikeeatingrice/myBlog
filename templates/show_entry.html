@@ -15,6 +15,6 @@
 
   {% endif %}
   <ul class=entries>
-    <li><h1>{{ entry.title }}</h1><p>{{entry.time}}</p>{{ entry.text|safe|markdown }}
+    <li><h2 class="entry_title">{{ entry.title }}</h2><p>{{entry.time}}</p>{{ entry.text|safe|markdown }}
   </ul>
 {% endblock %}

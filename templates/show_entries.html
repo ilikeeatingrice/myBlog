@@ -15,10 +15,10 @@
     {{ pagination.links }}
   {% for entry in entries %}
   {% if entry.text|length < 401 %}
-    <li><h2 class="entry_titile"><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><p class="time">{{entry.time}}</p>{{ entry.text|safe|markdown }}</li>
+    <li><h2 class="entry_title"><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><p class="time">{{entry.time}}</p>{{ entry.text|safe|markdown }}</li>
   <hr size=1>
   {% else %}
-    <li><h2 class="entry_titile"><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><p class="time">{{entry.time}}</p><p class="entry">{{ entry.text[:400]|safe|markdown }}</p> <p><a id = "read_more" href = "{{url_for('show_entry', entryId=entry.entryId)}}">Read more...</a></p>
+    <li><h2 class="entry_title"><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><p class="time">{{entry.time}}</p><p class="entry">{{ entry.text[:400]|safe|markdown }}</p> <p><a id = "read_more" href = "{{url_for('show_entry', entryId=entry.entryId)}}">Read more...</a></p>
   <hr size=1>
   {% endif %}
   {% else %}
