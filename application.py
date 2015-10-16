@@ -10,7 +10,7 @@ from flask.ext.triangle import Triangle
 #configuration
 DATABASE = '/home/ec2-user/tiancheng.db'
 DEBUG = True
-SECRET_KEY = "eat rice"
+SECRET_KEY = "eatrice"
 USERNAME = 'don.jobs'
 PASSWORD = '21654321'
 
