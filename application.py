@@ -33,6 +33,10 @@ def teardown_request(exception):
     if db is not None:
         db.close()
 
+@application.route('/about')
+def about():
+    return render_template('about.html')
+
 @application.route('/')
 def show_entries():
     search = False
