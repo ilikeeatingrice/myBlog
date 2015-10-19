@@ -8,7 +8,7 @@ from flask.ext.misaka import Misaka
 from flask.ext.triangle import Triangle
 
 #configuration
-DATABASE = '/home/db/tiancheng.db'
+DATABASE = 'tiancheng.db'
 DEBUG = True
 SECRET_KEY = "eatrice"
 USERNAME = 'don.jobs'
