@@ -10,9 +10,9 @@ from flask.ext.triangle import Triangle
 #configuration
 DATABASE = '/home/db/tiancheng.db'
 DEBUG = True
-SECRET_KEY = "eatrice"
+SECRET_KEY = "PUjF\x8eMX\xf1`\x14q\xc9\xc7\xfe\xb7\xa0\xc7`\xcb]\xcc\xd9\xee\x96"
 USERNAME = 'don.jobs'
-PASSWORD = '21654321'
+PASSWORD = 'Aragakk1'
 
 #app section
 application = Flask(__name__)
@@ -36,6 +36,10 @@ def teardown_request(exception):
 @application.route('/about')
 def about():
     return render_template('about.html')
+
+@application.route('/random')
+def random():
+    return render_template('random.html')
 
 @application.route('/')
 def show_entries():
