@@ -12,7 +12,7 @@ DATABASE = '/home/db/tiancheng.db'
 DEBUG = True
 SECRET_KEY = "PUjF\x8eMX\xf1`\x14q\xc9\xc7\xfe\xb7\xa0\xc7`\xcb]\xcc\xd9\xee\x96"
 USERNAME = 'don.jobs'
-PASSWORD = 'Aragakk1'
+PASSWORD = 'Aragakk14'
 
 #app section
 application = Flask(__name__)
