@@ -4,3 +4,7 @@ create table entries (
   text text not null,
   time datetime not null
 );	
+create table users (
+ userid integer primary key autoincrement,
+username text not null,
+password text not null);

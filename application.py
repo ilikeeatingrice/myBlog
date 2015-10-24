@@ -11,8 +11,6 @@ from flask.ext.triangle import Triangle
 DATABASE = '/home/db/tiancheng.db'
 DEBUG = True
 SECRET_KEY = "PUjF\x8eMX\xf1`\x14q\xc9\xc7\xfe\xb7\xa0\xc7`\xcb]\xcc\xd9\xee\x96"
-USERNAME = 'don.jobs'
-PASSWORD = 'Aragakk14'
 
 #app section
 application = Flask(__name__)
@@ -32,6 +30,14 @@ def teardown_request(exception):
     db = getattr(g, 'db', None)
     if db is not None:
         db.close()
+
+def get_password(username):
+    cur = g.db.execute('select password from users where username=?',[username])
+    row = cur.fetchall()
+    if row:
+        return row[0][0]
+    else:
+        return
 
 @application.route('/about')
 def about():
@@ -99,10 +105,9 @@ def delete_entry(entryId):
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != application.config['USERNAME']:
-            error = 'Invalid username'
-        elif request.form['password'] != application.config['PASSWORD']:
-            error = 'Invalid password'
+        PASSWORD = get_password(request.form['username'])
+        if PASSWORD != request.form['password']:
+            error = 'Invalid password/username'
         else:
             session['logged_in'] = True
             flash('You were logged in')
