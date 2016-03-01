@@ -14,14 +14,8 @@
   <ul class=entries>
     {{ pagination.links }}
   {% for entry in entries %}
-  {% if entry.text|length < 401 %}
-    <li><h2 class="entry_title"><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><p class="time">{{entry.time}}</p>{{ text|safe|markdown }}</li>
+    <li><h2 class="entry_title"><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><p class="time">{{entry.time}}</p>{{ entry.text|safe|markdown }}</li>
   <hr size=1>
-  {% else %}
-  {% set text = entry.text|safe|markdown %}
-    <li><h2 class="entry_title"><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><p class="time">{{entry.time}}</p><p class="entry">{{ text[:400]}}</p></li> <p2><a class = "read_more" href = "{{url_for('show_entry', entryId=entry.entryId)}}">Read more...</a></p2>
-  <hr size=1>
-  {% endif %}
   {% else %}
     <li><em>No entries here...</em>
   {% endfor %}
