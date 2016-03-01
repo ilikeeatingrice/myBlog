@@ -19,7 +19,7 @@
   <hr size=1>
   {% else %}
   {% set text = entry.text|safe|markdown %}
-    <li><h2 class="entry_title"><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><p class="time">{{entry.time}}</p><p class="entry">{{ text[:400]}}</p> <p><a class = "read_more" href = "{{url_for('show_entry', entryId=entry.entryId)}}">Read more...</a></p>
+    <li><h2 class="entry_title"><a href = "{{url_for('show_entry', entryId=entry.entryId)}}">{{ entry.title }}</a></h2><p class="time">{{entry.time}}</p><p class="entry">{{ text[:400]}}</p> <p2><a class = "read_more" href = "{{url_for('show_entry', entryId=entry.entryId)}}">Read more...</a></p2>
   <hr size=1>
   {% endif %}
   {% else %}
