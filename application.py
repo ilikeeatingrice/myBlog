@@ -8,7 +8,7 @@ from flask.ext.misaka import Misaka
 from flask.ext.triangle import Triangle
 
 #configuration
-DATABASE = '/home/db/tiancheng.db'
+DATABASE = 'flaskr.db'
 DEBUG = True
 SECRET_KEY = "PUjF\x8eMX\xf1`\x14q\xc9\xc7\xfe\xb7\xa0\xc7`\xcb]\xcc\xd9\xee\x96"
 
@@ -67,7 +67,7 @@ def show_entry(entryId):
     cur = g.db.execute('select title, text, time from entries where id = ?', [entryId])
     row = cur.fetchall()
     if row:
-        entry = dict(title = row[0][0], text = row[0][1], time= row[0][2][:-10] ,id = entryId) 
+        entry = dict(title = row[0][0], text = row[0][1], time= row[0][2][:-10] ,id = entryId)
         return render_template('show_entry.html', entry = entry)
     else:
         return show_entries()
